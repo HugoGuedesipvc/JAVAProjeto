@@ -1,12 +1,17 @@
 public abstract class Conta {
 
     int ID=0;
-    String nome;
+    String user;
     String password;
 
-    public Conta(String nome,String password){
-        this.nome=nome;
+    public Conta(String user,String password){
+        this.user=user;
         this.password=password;
+        this.ID++;
+    }
+
+    public int getID() {
+        return ID;
     }
 
 }

@@ -13,5 +13,7 @@ public class Main {
         System.out.println("Hello world!");
 
         Conta teste = new Utilizador("hugo","guedes");
+        RepositorioContas data = new RepositorioContas();
+        data.registarConta(teste);
     }
 }
