@@ -1,6 +1,15 @@
 import java.awt.*;
 import javax.swing.*;
+
+/**
+ * The type Janela.
+ */
 public class Janela {
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
     public static void main(String args[] )
     {
         JFrame f= new JFrame();
@@ -19,4 +28,5 @@ public class Janela {
      * JFrame.EXIT_ON_CLOSE - sai da aplicação quando alguém clica no Botão Fechar e remove o programa da memória permanentemente.
      */
     }
+
 }
