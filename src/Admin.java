@@ -1,8 +1,9 @@
 public class Admin extends Conta{
 
-    String nome=null;
+    public Admin(){
 
-    public Admin(String nome,String password){
-        super(nome, password);
+        super("HT", "HT","Administardor",17);
     }
+
+
 }

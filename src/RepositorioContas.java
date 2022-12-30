@@ -8,6 +8,19 @@ public class RepositorioContas {
         this.contas = new ArrayList<>();
     }
 
+    public List<Conta> getContas() {
+        return contas;
+    }
+    public void listarContas(){
+        for (Conta c :contas)
+        {
+            System.out.println(c.getID()+c.getNome());
+        }
+    }
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
+
     public void registarConta(Conta conta){
         boolean existe=false;
         for(Conta c : contas)

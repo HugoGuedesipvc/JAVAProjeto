@@ -1,9 +1,7 @@
 public class Utilizador extends Conta{
 
-    String nome=null;
+    public Utilizador(String user,String password,String nome,int numero){
 
-    int numeroHorasTrabalho=0;
-    public Utilizador(String user,String password){
-        super(user, password);
+        super(user, password,nome,numero);
     }
 }
