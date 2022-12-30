@@ -26,7 +26,7 @@ public class Login {
             opc = sc.nextInt();
             String s= sc.nextLine();
             if(opc==1){
-                Criarconta.criarconta(database);
+                //Criarconta.criarconta(database);
                 opc=2;
             }
         } while (opc != 0);

@@ -18,7 +18,7 @@ public class Main {
         Conta x= Login.login(database);
         System.out.println(x.getID()+" "+ x.getNome());
         database.listar();
-        MenuUtilizador.Menu(x);
+        //MenuUtilizador.Menu(x);
 
 
 
