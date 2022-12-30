@@ -1,6 +1,9 @@
 /**
  * The type Main.
  */
+import java.awt.List;
+import java.lang.reflect.Array;
+import java.util.*;
 public class Main {
 
     /**
@@ -11,9 +14,13 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
+        RepositorioContas database = new RepositorioContas();
+        Conta x= Login.login(database);
+        System.out.println(x.getID()+" "+ x.getNome());
+        database.listar();
+        MenuUtilizador.Menu(x);
 
-        Conta teste = new Utilizador("hugo","guedes");
-        RepositorioContas data = new RepositorioContas();
-        data.registarConta(teste);
+
+
     }
-}
+    }

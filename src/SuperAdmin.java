@@ -1,8 +1,7 @@
 public class SuperAdmin extends Conta{
+       int key=1;
+    public SuperAdmin(){
 
-    String nome="Administardor";
-
-    public SuperAdmin(String HT,String TH){
-        super("HT", "TH");
+        super("HT", "HT","Administardor",17);
     }
 }
