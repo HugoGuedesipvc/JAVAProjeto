@@ -9,6 +9,7 @@ public class LoginForm extends JDialog{
     private JButton loginButton;
     private JPanel loginPanel;
 
+    RepositorioContas database = new RepositorioContas();
     public LoginForm(JFrame login){
         super(login);
         setTitle("Login");
@@ -41,9 +42,15 @@ public class LoginForm extends JDialog{
 
     public Conta conta;
     private Conta getAuthenticatedUser(String username, String password) {
-        Conta conta = null;
-        ...
+        Conta Admin = new Admin();
+        database.registarConta(Admin);
 
+        for(Conta c: database.getContas()) {
+            if (username.equals(c.getUser()) && password.equals(c.getPassword())) {
+                return c;
+            }
+        }
+        return null;
     }
 
         public static void main(String[] args) {
