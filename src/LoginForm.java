@@ -8,6 +8,9 @@ public class LoginForm extends JDialog{
     private JTextField tfUsername;
     private JButton loginButton;
     private JPanel loginPanel;
+    private JButton criarContaButton;
+
+
 
     RepositorioContas database = new RepositorioContas();
     public LoginForm(JFrame login){
@@ -25,9 +28,9 @@ public class LoginForm extends JDialog{
                 String username = tfUsername.getText();
                 String password = String.valueOf(tfPassword.getPassword());
 
-                conta = getAuthenticatedUser(username, password);
+                logingui = getAuthenticatedUser(username, password);
 
-                if (conta != null) {
+                if (logingui != null) {
                     dispose();
                 }
                 else {
@@ -38,9 +41,18 @@ public class LoginForm extends JDialog{
                 }
             }
         });
+
+        criarContaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SigninForm signinForm = new SigninForm(null);
+                signinForm.setVisible(true);
+                setVisible(false);
+            }
+        });
     }
 
-    public Conta conta;
+    public Conta logingui;
     private Conta getAuthenticatedUser(String username, String password) {
         Conta Admin = new Admin();
         database.registarConta(Admin);

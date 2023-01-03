@@ -1,6 +1,7 @@
 /**
  * The type Main.
  */
+import javax.swing.*;
 import java.awt.List;
 import java.lang.reflect.Array;
 import java.util.*;
@@ -19,8 +20,6 @@ public class Main {
         System.out.println(x.getID()+" "+ x.getNome());
         database.listar();
         //MenuUtilizador.Menu(x);
-
-
 
     }
     }
